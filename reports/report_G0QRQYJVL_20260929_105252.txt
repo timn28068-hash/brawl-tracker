@@ -1,0 +1,32 @@
+Отчёт от 2026-09-29 10:52
+=== ЯZVA (#G0QRQYJVL) ===
+Кубки: 46613
+Максимум кубков: 46613
+Уровень опыта: 132
+Победы 3v3: 4602
+Победы соло: 424
+Победы дуо: 1183
+Клуб: Chuvash (#2Q9PC2LYR)
+
+--- Топ-10 бойцов ---
+1. BIBI — 2000 кубков, сила 11, роль Unknown
+2. GRIFF — 2000 кубков, сила 11, роль Unknown
+3. COLT — 1493 кубков, сила 11, роль Unknown
+4. MORTIS — 1199 кубков, сила 11, роль Unknown
+5. PIPER — 1158 кубков, сила 11, роль Unknown
+6. KIT — 1091 кубков, сила 11, роль Unknown
+7. EDGAR — 1062 кубков, сила 11, роль Unknown
+8. BUZZ — 1053 кубков, сила 11, роль Unknown
+9. STU — 1035 кубков, сила 11, роль Unknown
+10. BO — 1023 кубков, сила 11, роль Unknown
+Среднее: 1311
+
+--- Последние бои ---
+brawlBall — victory
+brawlBall — victory
+brawlBall — victory
+brawlBall — defeat
+brawlBall — victory
+
+--- Топ-1 мира ---
+Netty (#QVLRCJQ00) — 321278 кубков
