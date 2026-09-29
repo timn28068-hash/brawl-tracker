@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_python: ${{ steps.check.outputs.has_python }}
-      entry: ${{ steps.check.outputs.entry }}
     steps:
       - uses: actions/checkout@v4
       - name: Detect project
@@ -21,8 +20,6 @@ jobs:
           else
             echo "has_python=false" >> $GITHUB_OUTPUT
           fi
-          echo "entry=tracker.py" >> $GITHUB_OUTPUT
-          echo "Detected entry: tracker.py"
 
   build-apk:
     needs: detect
@@ -39,23 +36,22 @@ jobs:
             echo "ERROR: buildozer.spec missing"
             exit 1
           fi
-          echo "=== buildozer.spec (head) ==="
           head -40 buildozer.spec
           ls -la *.py 2>/dev/null || true
 
       - name: Build APK in Kivy Docker image
         run: |
-         docker run --rm \
-          -v "$PWD":/home/user/hostcwd \
-          -v "$HOME/.buildozer":/home/user/.buildozer \
-          -w /home/user/hostcwd \
-          kivy/buildozer:latest \
-          buildozer android debug
+          docker run --rm \
+            --entrypoint sh \
+            -v "$PWD":/home/user/hostcwd \
+            -v "$HOME/.buildozer":/home/user/.buildozer \
+            -w /home/user/hostcwd \
+            kivy/buildozer:latest \
+            -c "buildozer android debug"
 
       - name: Show APK outputs
         if: always()
         run: |
-          echo "=== bin/ ==="
           ls -la bin/ 2>/dev/null || echo "(no bin yet)"
           find . -name "*.apk" 2>/dev/null || true
 
