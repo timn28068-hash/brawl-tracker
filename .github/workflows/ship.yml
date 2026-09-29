@@ -45,11 +45,12 @@ jobs:
 
       - name: Build APK in Kivy Docker image
         run: |
-          docker run --rm \
-            -v "$PWD":/home/user/hostcwd \
-            -v "$HOME/.buildozer":/home/user/.buildozer \
-            kivy/buildozer:latest \
-            buildozer android debug
+         docker run --rm \
+          -v "$PWD":/home/user/hostcwd \
+          -v "$HOME/.buildozer":/home/user/.buildozer \
+          -w /home/user/hostcwd \
+          kivy/buildozer:latest \
+          buildozer android debug
 
       - name: Show APK outputs
         if: always()
